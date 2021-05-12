@@ -1,21 +1,19 @@
 "use strict";
-const inputNumber = document.querySelector("js-number");
+const inputNumber = document.querySelector(".js-number");
 const button = document.querySelector(".js-button");
 const inputMessage = document.querySelector(".js-clue");
 const inputCounter = document.querySelector(".js-counter");
 
-const selectNumber = parseInt(inputNumber).value;
-console.log(selectNumber);
-
 function getRandomNumber(max) {
   let number = Math.ceil(Math.random() * max);
-  console.log(getRandomNumber());
   return number;
 }
+const number = getRandomNumber(100);
+console.log(number);
 
-//button.addEventListener("click", getRandomNumber);
 function selectRandomMessage() {
-  const selectedNumber = inputNumber.value;
+  const selectedNumber = parseInt(inputNumber.value);
+  console.log(selectedNumber);
   if (selectedNumber === number) {
     // "Has ganado campeona"
     inputMessage.value = "Has ganado campeona";
@@ -35,9 +33,8 @@ function selectRandomMessage() {
 //function counterSelectRandomNumber ()
 //for (let i = 0; i < 20; i++) {}
 
-/*function handleClickButton() {
-  getRandomNumber(max);
+function handleClickButton() {
   selectRandomMessage();
 }
 
-button.addEventListener("click", handleClickButton);*/
+button.addEventListener("click", handleClickButton);
