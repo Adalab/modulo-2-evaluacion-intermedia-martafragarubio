@@ -1,15 +1,43 @@
 "use strict";
 const inputNumber = document.querySelector("js-number");
-const buttonClick = document.querySelector(".js-button");
+const button = document.querySelector(".js-button");
+const inputMessage = document.querySelector(".js-clue");
+const inputCounter = document.querySelector(".js-counter");
 
-/*function generateRandomNumber() {
-    // 0 .. 100
-    const number = Math.round(     Math.random() * 100    );
-    return number;
+const selectNumber = parseInt(inputNumber).value;
+console.log(selectNumber);
+
+function getRandomNumber(max) {
+  let number = Math.ceil(Math.random() * max);
+  console.log(getRandomNumber());
+  return number;
 }
 
+//button.addEventListener("click", getRandomNumber);
+function selectRandomMessage() {
+  const selectedNumber = inputNumber.value;
+  if (selectedNumber === number) {
+    // "Has ganado campeona"
+    inputMessage.value = "Has ganado campeona";
+    console.log(inputMessage.value);
+  } else if (selectedNumber > number) {
+    // "Demasiado alto"
+    inputMessage.value = "Demasiado alto";
+  } else if (selectedNumber < number) {
+    // "Demasiado bajo"
+    inputMessage.value = "Demasiado bajo";
+  } else if (selectedNumber < 1 && selectedNumber > 100) {
+    // "El número debe estar entre 1 y 100"
+    inputMessage.value = "El número debe estar entre 1 y 100";
+  }
+}
 
-function getRandomNumber(100) {
+//function counterSelectRandomNumber ()
+//for (let i = 0; i < 20; i++) {}
 
-  return Math.ceil(Math.random() * 100);
-}*/
+/*function handleClickButton() {
+  getRandomNumber(max);
+  selectRandomMessage();
+}
+
+button.addEventListener("click", handleClickButton);*/
