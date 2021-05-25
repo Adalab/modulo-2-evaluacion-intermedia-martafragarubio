@@ -14,9 +14,9 @@ console.log(number);
 function selectRandomMessage() {
   const selectedNumber = parseInt(inputNumber.value);
   console.log(selectedNumber);
-  if (selectedNumber === number) {
-    // "Has ganado campeona"
-    inputMessage.value = "Has ganado campeona";
+  if (selectedNumber < 1 || selectedNumber > 100) {
+    // "El número debe estar entre 1 y 100"
+    inputMessage.value = "El número debe estar entre 1 y 100";
     console.log(inputMessage.value);
   } else if (selectedNumber > number) {
     // "Demasiado alto"
@@ -24,17 +24,21 @@ function selectRandomMessage() {
   } else if (selectedNumber < number) {
     // "Demasiado bajo"
     inputMessage.value = "Demasiado bajo";
-  } else if (selectedNumber < 1 && selectedNumber > 100) {
-    // "El número debe estar entre 1 y 100"
-    inputMessage.value = "El número debe estar entre 1 y 100";
+  } else if (selectedNumber === number) {
+    // "Has ganado campeona"
+    inputMessage.value = "Has ganado campeona";
   }
 }
 
-//function counterSelectRandomNumber ()
-//for (let i = 0; i < 20; i++) {}
+let cont = 0;
+function counterSelect() {
+  cont++;
+  inputCounter.value = `Número de intentos: ${cont}`;
+}
 
 function handleClickButton() {
   selectRandomMessage();
+  counterSelect();
 }
 
 button.addEventListener("click", handleClickButton);

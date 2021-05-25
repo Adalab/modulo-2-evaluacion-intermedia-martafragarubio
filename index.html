@@ -8,42 +8,46 @@
     <title>guess the number!</title>
   </head>
   <body class="body">
-    <h1 class="title">Adivina el número</h1>
-    <label class="label" for="number">Introduce aquí tu número:</label>
-    <input
-      class="input-number js-number"
-      id="number"
-      type="text"
-      name="text"
-      value
-    />
-    <input
-      class="button js-button"
-      id="button"
-      type="button"
-      value="Prueba"
-      name="button"
-    />
-    <!--<button class="button js-button">Prueba</button>-->
+    <header><h1 class="title">Adivina el número</h1></header>
+    <main class="main">
+      <form action="#">
+        <label class="label" for="number">Introduce aquí tu número:</label>
+        <input
+          class="input-number js-number"
+          id="number"
+          type="number"
+          name="text"
+          value
+        />
+        <input
+          class="button js-button"
+          id="button"
+          type="button"
+          value="Prueba"
+          name="button"
+        />
+      </form>
+      <!--<button class="button js-button">Prueba</button>-->
 
-    <label class="label" for="text"></label>
-    <input
-      class="input-clue js-clue"
-      id="text"
-      type="text"
-      name="text"
-      value=""
-      placeholder="Pista: Escribe el número y dale a Prueba"
-    />
-    <label class="label" for="counter"></label>
-    <input
-      class="input-clue js-counter"
-      id="counter"
-      type="text"
-      name="text"
-      value=""
-      placeholder="Número de intentos: 0"
-    />
+      <label class="label" for="text"></label>
+      <input
+        class="input-clue js-clue"
+        id="text"
+        type="text"
+        name="text"
+        value=""
+        placeholder="Pista: Escribe el número y dale a Prueba"
+      />
+      <label class="label" for="counter"></label>
+      <input
+        class="input-clue js-counter"
+        id="counter"
+        type="text"
+        name="text"
+        value=""
+        placeholder="Número de intentos: 0"
+      />
+    </main>
     <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>
