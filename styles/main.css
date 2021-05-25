@@ -46,9 +46,14 @@
   padding-bottom: 10px;
 }
 .input-clue {
-  width: 50%;
+  width: 100%;
   height: 30px;
   border: 2px solid rgb(197, 194, 194);
   margin-bottom: 10px;
   padding-left: 9px;
+}
+@media all and (min-width: 768px) {
+  .input-clue {
+    width: 50%;
+  }
 }
