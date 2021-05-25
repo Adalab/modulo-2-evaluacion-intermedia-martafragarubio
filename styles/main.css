@@ -38,6 +38,7 @@
   background-color: turquoise;
   color: white;
   border-radius: 2px;
+  cursor: pointer;
 }
 .label {
   display: block;
